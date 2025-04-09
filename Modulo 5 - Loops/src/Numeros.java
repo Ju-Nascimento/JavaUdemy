@@ -24,9 +24,15 @@ public class Numeros {
             }
             y++;
         }
-        for (int x = 0; x <= contar; x++){
+        System.out.println("Numeros pares com for:");
+        for (int x = 0; x <= contar; x+=2){
             System.out.println(x);
-
+        }
+        System.out.println("Numeros impares com for: ");
+        for (int x = 0; x <= contar; x++){
+            if(x % 2 == 1){
+                System.out.println(x);
+            }
         }
         }
     }
