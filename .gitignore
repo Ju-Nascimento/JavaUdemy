@@ -1,0 +1,50 @@
+# Arquivos de build do IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Arquivos de compilação Java
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+
+# Arquivos de log
+*.log
+
+# Arquivos temporários
+*.tmp
+*.bak
+*.swp
+*~.nib
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Dependências (node_modules, por exemplo)
+node_modules/
+
+# Ambiente de desenvolvimento
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Arquivos do Gradle (se usar)
+.gradle/
+build/
+
+# Arquivos do Maven (se usar)
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+
+# Arquivos de usuário do VS Code (caso use)
+.vscode/
