@@ -21,21 +21,25 @@ public class Main {
 
         contaMaria.imprimirSaldo();
 
-        Cliente pedro = new Cliente("Pedro", "987654321");
+        Cliente pedro = new Cliente();
+        pedro.setNome("Pedro ");
+        pedro.setCpf("987654321");
 
+        Conta contaPedro = new Conta();
+        contaPedro.setTitular(pedro);
+        contaPedro.setConta(123);
+        contaPedro.setSaldo(200);
 
-        Conta contaPedro = new Conta(pedro, 250,100);
-
-        System.out.println("Transferindo 800 reais para Pedro");
-        sistema.transferir(contaMaria,contaPedro, 800);
+        System.out.println("Transferindo 80 reais para Pedro");
+        sistema.transferir(contaMaria,contaPedro, 80);
 
         contaMaria.imprimirSaldo();
-        System.out.print("Maria - ");
+        System.out.println("Maria - ");
 
-        System.out.print("Pedro - ");
+        System.out.println("Pedro - ");
         contaPedro.imprimirSaldo();
 
-
+        System.out.println("Quantidade de clientes cadastrados: "+ Cliente.qtdClientes);
 
     }
 }

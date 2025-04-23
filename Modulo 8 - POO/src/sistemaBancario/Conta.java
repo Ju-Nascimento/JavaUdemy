@@ -1,9 +1,9 @@
 package sistemaBancario;
 
 public class Conta {
-    Cliente titular;
-    int conta;
-    double saldo;
+    private Cliente titular;
+    private int conta;
+    private double saldo;
 
     Conta(){}
 
@@ -20,9 +20,36 @@ public class Conta {
             this.saldo = saldo;
         }
     }
+    public void setSaldo(double saldo){
+        if (saldo >= 0){
+            this.saldo = saldo;
+        }else {
+            System.out.println("Saldo não pode ser negativo");
+        }
+    }
 
+    public double getSaldo() {
+        return saldo;
+    }
 
     void imprimirSaldo(){
-        System.out.println("Saldo atual de "+this.titular.nome + " R$:" +this.saldo);
+        System.out.println("Saldo atual de "+this.titular.getNome() + " R$:" +this.saldo);
     }
+
+    public Cliente getTitular() {
+        return titular;
+    }
+
+    public void setTitular(Cliente titular) {
+        this.titular = titular;
+    }
+
+    public int getConta() {
+        return conta;
+    }
+
+    public void setConta(int conta) {
+        this.conta = conta;
+    }
+
 }
