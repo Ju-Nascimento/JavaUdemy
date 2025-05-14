@@ -1,6 +1,5 @@
 package cadastroClientes.apresentação;
 
-
 import cadastroClientes.dominio.Cliente;
 import cadastroClientes.dominio.enums.tipoSexo;
 
@@ -86,7 +85,7 @@ public class TelaCadastro extends JFrame {
                 cliente.setCpf(campoCpf.getText());
                 cliente.setSexo((tipoSexo) campoSexo.getSelectedItem());
 
-                JOptionPane.showMessageDialog(null, cliente.getNome());
+                JOptionPane.showMessageDialog(null, cliente);
             }
         };
 

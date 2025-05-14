@@ -2,6 +2,8 @@ package cadastroClientes.dominio;
 
 import cadastroClientes.dominio.enums.tipoSexo;
 
+import java.util.Arrays;
+import java.util.Objects;
 import java.util.UUID;
 
 public class Cliente {
@@ -10,6 +12,8 @@ public class Cliente {
     private String cpf;
     private tipoSexo sexo;
     private byte[] foto;
+
+
 
 
     public Cliente (){
@@ -54,5 +58,28 @@ public class Cliente {
 
     public void setFoto(byte[] foto) {
         this.foto = foto;
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "ID =" + codigo +
+                ", Nome ='" + nome + '\'' +
+                ", CPF='" + cpf + '\'' +
+                ", Sexo=" + sexo +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Cliente cliente = (Cliente) o;
+        return nome.equals(cliente.nome) && cpf.equals(cliente.cpf);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(codigo, nome, cpf, sexo, Arrays.hashCode(foto));
     }
 }
