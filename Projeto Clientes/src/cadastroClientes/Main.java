@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         TelaCadastro tela = new TelaCadastro();
 
-        // tela.setVisible(true);
+        tela.setVisible(true);
 
         Cliente cliente = new Cliente();
         cliente.setNome("Juan");
